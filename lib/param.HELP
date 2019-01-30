@@ -1,0 +1,63 @@
+Advanced configuration before build:
+====================================
+
+1) Set/change default settings in http_client.h as per your need.
+    --------------------------------------------------------------------
+    Parameter Name    | Macro Name         | Type    | Default Value
+    --------------------------------------------------------------------
+    DomeCookieName    |                    | String | "datadome"
+    DomePostParamLim  |                    | int    | 3072
+    DomeMaxTried      | MAX_TRIED          | int    | 1
+    DomeRefreshIN     | REFRESH_IN         | int    | 300
+    DomeStatus        | DEF_DOME_STATUS    | String | "auto"
+    DataExclude       | DEF_DATA_EXCLUDE   | String | ""
+    ApiHost           | DEF_API_HOST       | String | "api.datadome.co"
+    ApiPort           | DEF_API_PORT       | int    | 8080
+    DebugMode         | DEF_DEBUG_MODE     | bool   | 0
+    TimeOut           | DEF_TIMEOUT_MS     | int    | 50 (50 milliseconds)
+    MimeToHandle      | DEF_MIME_LIST      | String | ^[^.]+$|\.(?!(js|css|jpg|jpeg|png|ico|gif|tiff|woff|woff2|ttf|eot)$)[^.]+$
+    ApiURI            | DEF_API_URI        | String | "/validate-request/"
+    ApiProtocol       | DEF_API_PROTOCOL   | String | "HTTP"
+
+2) If you want to add extra headers in http post request (Dome to API request),
+    then append it to 'EXTRA_HEADERS' seperated & ended by '\r\n'
+3) If you are adding more headers in http post, then make sure
+    to set appropiate 'PRE_RESERVED_HTTP_HEADER_SIZE' (http_client.c).
+    
+    
+|________________________________________________________________________________|
+|                         DOME PARAMETERS                                        |
+|________________________________________________________________________________|
+|--------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------|
+|     PARAM NAME | DEFAULT |   DESCRIPTION                                       |
+|--------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------|
+|            Key | Enabled | The customer Key                                    |
+|--------------------------------------------------------------------------------|
+|      UserAgent | Enabled | Client User Agent                                   |
+|--------------------------------------------------------------------------------|
+|             IP | Enabled | Client IP address                                   |
+|--------------------------------------------------------------------------------|
+|           Host | Enabled | Hostname of Dome server requested by client         |
+|--------------------------------------------------------------------------------|
+|        Referer | Enabled | Referer                                             |
+|--------------------------------------------------------------------------------|
+|        Request | Enabled | Current requested page (URI)                        |
+|--------------------------------------------------------------------------------|
+|       Protocol | Enabled | Request Protocol (Ex : HTTP/1.0)                    |
+|--------------------------------------------------------------------------------|
+|        Cookies | Enabled | Cookie in HTTP request                              |
+|--------------------------------------------------------------------------------|
+|    TimeRequest | Enabled | Request time in milliseconds                        |
+|--------------------------------------------------------------------------------|
+| ServerHostname | Enabled | Hostname of dome server                             |
+|--------------------------------------------------------------------------------|
+|  ModuleVersion | Enabled | Dome module version                                 |
+|--------------------------------------------------------------------------------|
+|      PostParam | Enabled | Post parameters in POST request body                |
+|--------------------------------------------------------------------------------|
+|     ServerName | Enabled | Server name as per /etc/hostname                    |
+|--------------------------------------------------------------------------------|
+| XForwaredForIP | Enabled | X-Forwarded-For, for reverse proxy enabled client   |
+|--------------------------------------------------------------------------------|
