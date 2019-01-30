@@ -22,10 +22,13 @@ TMP_DIR := /tmp/$(shell date +%s).$(shell echo $$RANDOM)
 $(shell mkdir -p $(TMP_DIR) && cd $(TMP_DIR) && $(APXS) -n test -g''>/dev/null 2>&1)
 TMP_MK_FILE := $(TMP_DIR)/test/Makefile
 OS=$(shell if grep -q -i SuSE /etc/*release; then echo SuSE; fi)
+ifeq ($(strip $(OS)),)
+    OS=$(shell if grep -q -i Gentoo /etc/*release; then echo Gentoo; fi)
+endif
 UNAME=$(shell uname)
 
 builddir=.
-ifeq ($(OS), SuSE)
+ifeq ($(OS),$(filter $(OS), SuSE Gentoo))
     include_file_path=$(shell awk '/^include/{print $$2}' $(TMP_MK_FILE))
     include_file_dir=$(shell dirname $(include_file_path))
     top_srcdir=$(shell dirname $(include_file_dir))
