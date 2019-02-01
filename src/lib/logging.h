@@ -9,7 +9,7 @@
 #include "http_client.h"
 #include "http_config.h"
 
-extern module AP_MODULE_DECLARE_DATA datadome_shield_module;
+extern module AP_MODULE_DECLARE_DATA gandalf_module;
 
 /* For Apache 2.4+ */
 #ifdef APLOG_USE_MODULE
