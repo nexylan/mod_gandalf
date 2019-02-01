@@ -13,7 +13,7 @@ extern module AP_MODULE_DECLARE_DATA gandalf_module;
 
 /* For Apache 2.4+ */
 #ifdef APLOG_USE_MODULE
-APLOG_USE_MODULE(datadome_shield);
+APLOG_USE_MODULE(gandalf);
 #endif
 
 extern int LOGLEVEL;

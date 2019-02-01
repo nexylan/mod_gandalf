@@ -73,7 +73,7 @@ install: install-modules-yes
 
 #   cleanup
 clean: clean_dome
-	-rm -f mod_datadome_shield.o mod_datadome_shield.lo mod_datadome_shield.slo mod_datadome_shield.la 
+	-rm -f mod_gandalf.o mod_gandalf.lo mod_gandalf.slo mod_gandalf.la 
 
 #  Prepare for compilation
 prepare: prepare_dome
