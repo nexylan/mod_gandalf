@@ -15,7 +15,7 @@
 #define CORE_PRIVATE /* for ap_top_module */
 #include "http_config.h"
 
-#include "common.h"
+#include "include/common.h"
 
 #define MODULE_VERSION "2.41"
 #define DEF_SERVERNAME "DataDome"
@@ -115,7 +115,7 @@ struct _string_ident dome_param_list[] = {
     FILL_STR_IDENT(DOME_PARAM_MODULEVERSION, "ModuleVersion", ENABLE, -1, 0, 0),
     FILL_STR_IDENT(DOME_PARAM_POSTPARAM_LEN, "PostParamLen", ENABLE, -1, 0, 0),
     FILL_STR_IDENT(DOME_PARAM_SERVERNAME, "ServerName", ENABLE, 512, 1, 0),
-    FILL_STR_IDENT(DOME_PARAM_XFORWAREDFORIP, "XForwaredForIP", ENABLE, 512, 1, 1),
+    FILL_STR_IDENT(DOME_PARAM_XFORWAREDFORIP, "X-Forwarded-For", ENABLE, 512, 1, 1),
     FILL_STR_IDENT(DOME_PARAM_HEADERSLIST, "HeadersList", ENABLE, 512, 1, 0),
     FILL_STR_IDENT(DOME_PARAM_ACCEPT, "Accept", ENABLE, 512, 1, 0),
     FILL_STR_IDENT(DOME_PARAM_ACCEPT_CHARSET, "AcceptCharset", ENABLE, 128, 1, 0),

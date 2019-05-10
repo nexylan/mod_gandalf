@@ -1,7 +1,7 @@
 FROM httpd:latest
 
 RUN apt update && \
-  apt install --yes build-essential && \
+  apt install --yes build-essential libssl-dev && \
   rm --recursive --force /var/lib/apt/lists/*
 
 ADD ./src /code
