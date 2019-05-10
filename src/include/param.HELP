@@ -59,5 +59,5 @@ Advanced configuration before build:
 |--------------------------------------------------------------------------------|
 |     ServerName | Enabled | Server name as per /etc/hostname                    |
 |--------------------------------------------------------------------------------|
-| XForwaredForIP | Enabled | X-Forwarded-For, for reverse proxy enabled client   |
+| X-Forwarded-For| Enabled | X-Forwarded-For, for reverse proxy enabled client   |
 |--------------------------------------------------------------------------------|

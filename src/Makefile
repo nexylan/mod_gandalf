@@ -62,8 +62,8 @@ endif
 endif
 
 prepare_dome:
-	-find lib/*.c -type f | while read fname; do ln -sf $$fname `basename $$fname`; done
-	-find lib/*.h -type f | while read fname; do ln -sf $$fname `basename $$fname`; done
+	-find include/*.c -type f | while read fname; do ln -sf $$fname `basename $$fname`; done
+	-find include/*.h -type f | while read fname; do ln -sf $$fname `basename $$fname`; done
 
 clean_dome:
 	-rm -rf `find . -type l`
